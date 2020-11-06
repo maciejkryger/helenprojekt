@@ -1,0 +1,162 @@
+body {width: 80%; margin-left: 10%; margin-right: 10%;  font-family: Arial; color: black; text-transform: uppercase;}
+
+
+.logo{width: 89%; float:left; text-align: center; padding-left: 10%; padding-top: 20px; margin-bottom: 20px;}
+.logo img {width: 15%; min-width: 150px;}
+.logo img:hover{cursor: pointer;}
+
+.socialMedia{width: 9%; padding-top: 20px; margin-right: 2%; float:left; text-align: right;}
+.socialMedia a{color: black; font-size: 36px;}
+
+.menu{font-size: 18px; color: grey; border-top: 4px solid #e9e9e9; height: 50px; width: 100%; display: flex; align-items: center; justify-content: center;}
+.menu p:hover{cursor: pointer; color: black;}
+.menu p { padding: 25px 3% 10px 3%;}
+.menu p.marked{color:black;font-weight: bold;}
+.menu p.marked:hover{color: black;}
+
+
+.hamburger{clear:both;display: none; }
+.topnav {clear:both;display: none;}
+
+.content{align-items: center;justify-content: center; margin-top: 1%;}
+
+/*logo signature blade in partials*/
+.logoSignature{clear:both;text-align: center;text-transform: none;}
+.logoSignatureHelen{font-size: 50px; text-decoration: underline; font-weight: bold;}
+.logoSignatureProject{font-size: 27px; margin-top: -25px;  padding-bottom: 30px}
+.logoSignatureDescription{font-size: 30px;}
+
+/*main page*/
+.slideContent{width: 60%; text-align; border: solid 1px transparent;margin-left: 20%; position: relative; display: inline-block}
+.slideContent img{text-align: center;}
+.mySlides .logoSignature{color: #ffffff !important; margin: 20% 10%; position: absolute;
+				top: 0; left: 0; bottom: 0; right: 0; height: 50px; cursor: pointer;}
+.mySlides {display: block; }
+.mySlides img {-ms-transform: scale(1.2); -moz-transform: scale(1.2); -webkit-transform: scale(1.2); -o-transform: scale(1.2); 
+										transform: scale(1); transition: all .5s; animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}; }
+
+
+/*projects page with photos efect*/
+div.project {float: left; width: 33.3%; min-height: 390px ;border: 1px solid transparent; overflow: hidden; position: relative; float: left; display: inline-block;}
+div.project img{width: 100%; min-height: 390px; background-size: cover; background-repeat: no-repeat; 
+			-webkit-transition: all .5s; -moz-transition: all .5s; -o-transition: all .5s; transition: all .5s;}
+div.project:hover img, div.project:focus img{-ms-transform: scale(1.2); -moz-transform: scale(1.2); -webkit-transform: scale(1.2); -o-transform: scale(1.2); 
+										transform: scale(1.20); filter: brightness(50%); transition: all .5s; cursor: pointer;}
+div.project img::before {content: ""; display: none; height: 100%;
+  width: 100%; position: absolute; top: 0; left: 0; background-color: rgba(52, 73, 94, 0.75);}
+div.project:hover div.project img:before,
+div.project:focus div.project img:before {display: block;}
+div.project span{display: none; color: #ffffff !important; font-size: 18px; text-align: center; margin: auto; position: absolute; 
+				top: 0; left: 0; bottom: 0; right: 0; height: 50px; cursor: pointer; /*text-decoration: none;*/}
+div.project:hover span, div.project:focus span {display: block;}
+
+/*poject details page*/
+div.projectTitle{width: 100%; font-size: 27px; align-items: center; justify-content: center; display: flex; margin-top:3%;margin-bottom: 1%;}
+div.projectItems {width: 100%;}
+div.projectItems:hover {border: 1px solid white;cursor: auto;}
+div.projectItems img{width: 100%;height: auto;transition: transform .2s;}
+
+/*about page*/
+.aboutContect{width: 100%; height: 100%; background-color: #e9e9e9; display: inline-block;}
+.aboutPhoto{width: 26%; height: 100%;float: left; display: inline; }
+.aboutText{width: 74%; height: 100%; float: right; text-transform: none; background-color: #e9e9e9; padding: 2%; font-size: 16px; }
+.aboutTextDescription{padding-bottom: 2%; min-height: 100%;}
+.aboutTextSignature p{margin-bottom: 0px; margin-top: 0px;}
+.aboutOpinions{text-align: center; margin-top: 20px; font-size: 16px;}
+.aboutOpinions img {max-width: 100%;}
+
+
+/*publication page*/
+.publication{margin-top: 5%; margin-bottom: 5%;}
+.publicationHorizontal{width:100%;}
+.publicationVertical{width:50%;float: left;}
+
+/*contact page*/
+.contactImage {float: left; width: 55%;}
+.contactImage img, .aboutPhoto img, .publication img{width: 100%;}
+.contactData{ width: 25%; text-transform: none; float:right; margin: 5% 15% 10% 5%;}
+p.companyName{font-size: 26px; font-weight: bold;}
+p.phone, p.eMail{font-size: 22px; margin-bottom: 0px}
+p.eMail a.mail, p.phone a.callTo{color: currentColor;}
+p.openHoursTopic{font-size: 19px; margin-top:30px ;margin-bottom: 10px;}
+p.openHours{font-size: 19px;margin-bottom: 0px;}
+
+.scrollTopButton {width: 64px; height: 64px; position: fixed; visibility: hidden; overflow: hidden; z-index: 99999999; 
+	background-image: url('/projects/utilPhotos/arrows-up.png'); background-size: 64px; right: 30px; bottom: 30px; transition: all 0.5s ease-in-out;}
+.scrollTopButton.show  {visibility: visible; cursor: pointer; transition: all 0.5s ease-in-out;}
+
+.footer{clear:both; color: grey; height: 50px; width: 100%; align-items: center; justify-content: center; display: flex;}
+div.footer a.mail{color: grey; font-weight: bold;}
+div.footer a.mail:hover{color: darkgrey; font-weight: bold;}
+
+@media only screen and (max-width: 1000px) {
+	/* For tablets phones: */
+	body {width: 98%; margin-left: 1px; margin-right: 1px;}
+	.socialMedia a{font-size: 24px;}
+
+}
+
+
+@media only screen and (max-width: 800px) {
+/* For mobile phones: */
+    body {width: 98%; margin-left: 1px; margin-right: 1px;}
+
+	.logo{float:left; width: 80%; padding-left: 20%; text-align: center; padding-top: 20px; margin-bottom: 20px; margin-right: 0px;	margin-left: 0px;}
+	.logo img {width: 150px;min-width: 150px;}
+
+	.socialMedia{float:left; width: 20%; padding-top: 20px; margin-right: 0px; float:left; text-align: right; }
+	.socialMedia a{font-size: 24px;}
+
+	.menu {display: none;}
+	.content{margin-top: 135px;}
+
+	/*mobile menu hamburger*/
+	.hamburger {display: inline-block; cursor: pointer;}
+	.bar1, .bar2, .bar3 {width: 35px; height: 3px; background-color: white; margin: 6.15px 0; transition: 0.4s;}
+	/* Rotate first bar */
+	.change .bar1 {-webkit-transform: rotate(-45deg) translate(-6px, 6px); transform: rotate(-45deg) translate(-6px, 6px);}
+	/* Fade out the second bar */ 
+	.change .bar2 {opacity: 0;}
+	/* Rotate last bar */
+	.change .bar3 {-webkit-transform: rotate(45deg) translate(-7px, -7px) ; transform: rotate(45deg) translate(-7px, -7px);}
+
+/** inny szary: #ddd **/
+	.mobileMenu{width: 100%, height:100px;position:static;padding: 10px;}
+	/* Style the navigation menu */
+	.topnav {display: block;overflow: hidden; background-color: #e9e9e9;position: absolute;transition: 0.1s;z-index: 1;top:100px; left: 0px; width: 100%;}
+	/* Hide the links inside the navigation menu (except for logo/home) */
+	.topnav #myLinks {display: none;}
+	/* Style navigation menu links */
+	.topnav p, .active {color: black; padding: 10px 10px; text-decoration: none; font-size: 17px; display: block;cursor: pointer;}
+	.topnav p { padding-bottom: 5px; margin:-2px -2px 0px 0px;}
+	/* Add a grey background color on mouse-over */
+	.topnav p:hover {background-color: #333; color: white;}
+	/* Style the active link (or home/logo) */
+	.active {background-color: #e9e9e9; cursor: auto; border-bottom: solid #ddd; min-height: 45px; }
+	.hamburger{background-color: white; padding: 5px 5px; display: block; background: black; position: absolute; right: 0; top: 0}
+
+	.footer{width: 100%;}
+
+	.slideContent{width: 100%; margin:0px;}
+	.mySlides .logoSignature{margin: 15% 3% 3% 3%;}
+	.logoSignatureHelen{font-size: 42px;}
+	.logoSignatureProject{font-size: 23px; margin-top: -22px; margin-bottom: -22px;}
+	.logoSignatureDescription{font-size: 18px;}
+
+	div.project, div.projectItems {width: 100%; margin: 0px; min-height: 0px;}
+
+	div.project img, div.projectItems img{width: 100%;height: auto;min-height: 0px;}
+
+	div.projectTitle{font-size: 17px; text-align: center;}
+
+	.contactImage,.contactData{float: none; width: 100%;}
+
+	.publicationVertical{width:100%;}
+
+	.aboutPhoto, .aboutText,.aboutOpinions{width: 100%; float: none;}
+	.aboutOpinions img{width: 100%;}
+
+
+
+}
+
